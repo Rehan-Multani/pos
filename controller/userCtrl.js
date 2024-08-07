@@ -59,10 +59,9 @@ const loginUserCtrl = asyncHandler(async (req, res) => {
     });
     res.json({
       _id: findUser?._id,
-      firstname: findUser?.firstname,
-      lastname: findUser?.lastname,
+      name: findUser?.name,
       email: findUser?.email,
-      mobile: findUser?.mobile,
+      password: findUser?.password,
       token: generateToken(findUser?._id),
     });
   } else {
